@@ -52,9 +52,9 @@ const workExperience = [
 
 const WorkExperiencePage = () => {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-950 via-gray-700 to-gray-900 text-white p-8">
-        <div className="max-w-3xl px-6 text-left">
-          <h1 className="text-4xl md:text-6xl text-center font-bold mb-12 mt-16">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-950 via-gray-700 to-gray-900 text-white p-2 md:p-4">
+        <div className="max-w-3xl px-2 md:px-4 text-left">
+          <h1 className="text-4xl md:text-6xl text-center font-bold mb-4 md:mb-8 mt-16">
             <Typical steps={['Work Experience', 1000]} wrapper="span" />
           </h1>
           <VerticalTimeline layout="1-column-left">
@@ -68,25 +68,25 @@ const WorkExperiencePage = () => {
                 iconStyle={{ background: '#61dafb', color: '#fff', zIndex: 3 }}
                 icon={<FaBriefcase />}
               >
-                <div className="bg-gray-800 p-4 md:p-8 rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl w-full">
-                  <div className="flex flex-col md:flex-row items-center mb-8">
+                <div className="bg-gray-800 p-2 md:p-4 rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl w-full">
+                  <div className="flex flex-col md:flex-row items-center mb-4">
                     <img
-                      height="60"
-                      width="60"
+                      height="50"
+                      width="50"
                       src={experience.logo}
                       alt='logo'
-                      className="mb-4 md:mb-0 mr-0 md:mr-4 rounded-full"
+                      className="mb-2 md:mb-0 mr-0 md:mr-2 rounded-full"
                     />
                     <div>
-                      <h2 style={{ color: 'white', textAlign: 'center'}} className="text-2xl md:text-2xl font-bold mb-2">
+                      <h2 style={{ color: 'white', textAlign: 'center' }} className="text-xl md:text-2xl font-bold mb-2">
                         {experience.position}
                       </h2>
-                      <h3 style={{ color: 'white', textAlign: 'center'}} className="text-lg md:text-xl font-semibold mb-4">{experience.company}</h3>
+                      <h3 style={{ color: 'white', textAlign: 'center' }} className="text-md md:text-lg font-semibold mb-2">{experience.company}</h3>
                     </div>
                   </div>
                   <ul className="text-gray-300">
                     {experience.responsibilities.map((responsibility, index) => (
-                      <li key={index} className="mb-2">
+                      <li key={index} className="mb-1">
                         {responsibility}
                       </li>
                     ))}
@@ -99,5 +99,4 @@ const WorkExperiencePage = () => {
       </div>
     );
   };
-
 export default WorkExperiencePage;
