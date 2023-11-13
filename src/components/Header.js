@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="py-4 bg-gray-900 text-teal-300 fixed w-full z-50 transition-all duration-300 ease-in-out">
       <nav className="container mx-auto px-4 flex justify-between items-center relative">
-        <Link to="/" className="text-2xl font-semibold custom-typography hover:text-teal-50 transition duration-300 ease-in-out">
+        <Link to="/himanshu-portfolio" className="text-2xl font-semibold custom-typography hover:text-teal-50 transition duration-300 ease-in-out">
           {'{Himanshu}'}
         </Link>
         {/* Overlay for smaller screens */}
