@@ -52,7 +52,7 @@ const ProjectsPage = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-gray-800 cursor-pointer p-2 md:p-4 mb-4 rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl w-full ease-in-out"
+              className="bg-gray-800 cursor-pointer p-4 md:p-4 mb-4 rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl w-full ease-in-out"
             >
               <div className="bg-opacity-70 rounded-lg overflow-hidden transition-opacity duration-300 hover:opacity-100">
                 <img
