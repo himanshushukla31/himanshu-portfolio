@@ -1,0 +1,23 @@
+/* styles.css
+@keyframes shimmer {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(to right, #202020 8%, #303030 18%, #202020 33%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+
+.shimmer:hover {
+  animation-name: shimmer;
+}
+
+/* ProjectsPage.css */
+

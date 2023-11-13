@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.custom-typography {
+  font-family: 'Arial', sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  transition: color 0.3s ease, letter-spacing 0.3s ease; /* Add transitions for color and letter spacing */
+}
+
+.custom-typography:hover {
+  color: #e74c3c; /* Change color on hover */
+  letter-spacing: 12px; /* Increase letter spacing on hover */
+}
+
+
+/* src/index.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
