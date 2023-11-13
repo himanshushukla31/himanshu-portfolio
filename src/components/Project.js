@@ -43,16 +43,16 @@ const projects = [
 
 const ProjectsPage = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-950 via-gray-700 to-gray-900 text-white p-8">
-      <div className="max-w-8xl px-6 text-left">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-950 via-gray-700 to-gray-900 text-white p-4 md:p-8">
+      <div className="max-w-8xl px-4 md:px-8 text-left">
         <h1 className="text-4xl md:text-6xl text-center font-bold mb-8 mt-16">
           <Typical steps={['My Projects', 1000]} wrapper="span" />
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-gray-800 cursor-pointer p-4 mb-4 rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl w-full ease-in-out"
+              className="bg-gray-800 cursor-pointer p-2 md:p-4 mb-4 rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl w-full ease-in-out"
             >
               <div className="bg-opacity-70 rounded-lg overflow-hidden transition-opacity duration-300 hover:opacity-100">
                 <img
