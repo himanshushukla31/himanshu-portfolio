@@ -66,7 +66,7 @@ const HomePage = () => {
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
           <Link
-            to="/projects"
+            to="/himanshu-portfolio/projects"
             className="flex items-center bg-teal-400/10 font-semibold leading-5 text-teal-300 py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring focus:border-rgb(94 234 212)"
           >
             View Projects
