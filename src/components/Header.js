@@ -23,38 +23,38 @@ const Header = () => {
             </button>
           </div>
           <div className="flex flex-col mt-48 justify-center items-center text-white">
-            <Link  to="/" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl text-teal-500 hover:text-green-300 transition duration-300 ease-in-out mb-8">
+            <Link  to="/himanshu-portfolio" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl text-teal-500 hover:text-green-300 transition duration-300 ease-in-out mb-8">
               {'<HOME/>'}
             </Link>
-            <Link to="/experience" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl  text-teal-500 hover:text-green-300 transition duration-300 ease-in-out mb-8">
+            <Link to="/himanshu-portfolio/experience" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl  text-teal-500 hover:text-green-300 transition duration-300 ease-in-out mb-8">
               {'<EXPERIENCE/>'}
             </Link>
-            <Link to="/projects" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl text-teal-500 hover:text-green-300 transition duration-300 ease-in-out mb-8">
+            <Link to="/himanshu-portfolio/projects" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl text-teal-500 hover:text-green-300 transition duration-300 ease-in-out mb-8">
               {'<PROJECTS/>'}
             </Link>
-            <Link to="/contact" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl text-teal-500 hover:text-green-300 transition duration-300 ease-in-out mb-8">
+            <Link to="/himanshu-portfolio/contact" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl text-teal-500 hover:text-green-300 transition duration-300 ease-in-out mb-8">
               {'<CONTACT/>'}
             </Link>
-            <Link to="/about" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl text-teal-500 hover:text-green-300 transition duration-300 ease-in-out mb-8">
+            <Link to="/himanshu-portfolio/about" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl text-teal-500 hover:text-green-300 transition duration-300 ease-in-out mb-8">
               {'<SKILLS/>'}
             </Link>
           </div>
         </div>
         {/* Navigation links for larger screens */}
         <div className={`lg:flex hidden space-x-6`}>
-          <Link to="/" className="font-bold hover:text-green-300 transition duration-300 ease-in-out">
+          <Link to="/himanshu-portfolio" className="font-bold hover:text-green-300 transition duration-300 ease-in-out">
             {'<HOME/>'}
           </Link>
-          <Link to="/experience" className="font-bold hover:text-green-300 transition duration-300 ease-in-out">
+          <Link to="/himanshu-portfolio/experience" className="font-bold hover:text-green-300 transition duration-300 ease-in-out">
             {'<EXPERIENCE/>'}
           </Link>
-          <Link to="/projects" className="font-bold hover:text-green-300 transition duration-300 ease-in-out">
+          <Link to="/himanshu-portfolio/projects" className="font-bold hover:text-green-300 transition duration-300 ease-in-out">
             {'<PROJECTS/>'}
           </Link>
-          <Link to="/contact" className="font-bold hover:text-green-300 transition duration-300 ease-in-out">
+          <Link to="/himanshu-portfolio/contact" className="font-bold hover:text-green-300 transition duration-300 ease-in-out">
             {'<CONTACT/>'}
           </Link>
-          <Link to="/about" className="font-bold hover:text-green-300 transition duration-300 ease-in-out">
+          <Link to="/himanshu-portfolio/about" className="font-bold hover:text-green-300 transition duration-300 ease-in-out">
             {'<SKILLS/>'}
           </Link>
         </div>
