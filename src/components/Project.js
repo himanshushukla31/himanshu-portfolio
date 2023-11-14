@@ -6,38 +6,56 @@ const projects = [
   {
     id: 1,
     name: 'AIREX',
-    description: 'Description of Project 1.',
+    description: 'An online exchange platform with chat integration.',
     githubLink: 'https://github.com/username/project1',
-    demoLink: 'https://demo.project1.com',
+    demoLink: 'https://airex-vnit.vercel.app/',
     image: 'https://i.ibb.co/9g0G3zP/aireximage.png',
     skills: ["Nodejs", "Reactjs", "MongoDB"]
   },
   {
     id: 2,
     name: 'AIRFLIX',
-    description: 'Description of Project 2.',
+    description: 'Online movie streaming platform.',
     githubLink: 'https://github.com/username/project2',
-    demoLink: 'https://demo.project2.com',
+    demoLink: 'https://air-flix.vercel.app/',
     image: 'https://i.ibb.co/R2tWvHn/AIRFLIX.png',
-    skills: ["Nodejs", "Reactjs", "MongoDB"]
+    skills: ["Nextjs", "Typescript", "Shadcn/UI"]
   },
   {
     id: 3,
     name: 'Chrome Extension SummAize',
-    description: 'Description of Project 2.',
-    githubLink: 'https://github.com/username/project2',
-    demoLink: 'https://demo.project2.com',
+    description: 'Handy text summarizer chrome extension.',
+    githubLink: 'https://github.com/himanshushukla31/chrome-extension-summarizer/tree/main',
+    demoLink: 'https://github.com/himanshushukla31/chrome-extension-summarizer/tree/main',
     image: 'https://i.ibb.co/dKsJ178/chrome-extension.png',
-    skills: ["Nodejs", "Reactjs", "MongoDB"]
+    skills: ["Javascript", "Jquery", "RapidApi"]
   },
   {
     id: 4,
     name: 'DevConnector',
-    description: 'Description of Project 2.',
-    githubLink: 'https://github.com/username/project2',
-    demoLink: 'https://demo.project2.com',
+    description: 'Social platform for developers',
+    githubLink: 'https://github.com/himanshushukla31/Dev-connector',
+    demoLink: 'https://github.com/himanshushukla31/Dev-connector',
     image: 'https://i.ibb.co/fHKtM0Q/Dev-Connector.webp',
-    skills: ["Nodejs", "Reactjs", "MongoDB"]
+    skills: ["Nodejs", "Reactjs", "MongoDB", "Redux"]
+  },
+  {
+    id: 5,
+    name: 'Food Order App',
+    description: 'Order your fav pizza now!',
+    githubLink: 'https://github.com/himanshushukla31/FoodOrder',
+    demoLink: 'https://himanshushukla31.github.io/FoodOrder/',
+    image: 'https://i.ibb.co/jbFVT8r/food-Order-App.png',
+    skills: ["Reactjs", "React Hooks"]
+  },
+  {
+    id: 6,
+    name: 'Expense Tracker',
+    description: 'Track your expense with handy expense tracker.',
+    githubLink: 'https://github.com/himanshushukla31/Expense-Tracker',
+    demoLink: 'https://github.com/himanshushukla31/Expense-Tracker',
+    image: 'https://i.ibb.co/ftMHNBX/expense.png',
+    skills: ["React", "HTML", "CSS"]
   }
 ];
 
@@ -50,7 +68,8 @@ const ProjectsPage = () => {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8">
           {projects.map((project) => (
-            <div
+            <a
+              href={project.demoLink}
               key={project.id}
               className="bg-gray-800 cursor-pointer p-4 md:p-4 mb-4 rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl w-full ease-in-out"
             >
@@ -91,7 +110,7 @@ const ProjectsPage = () => {
                   <FaGithub className="mr-1" />
                 </a>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

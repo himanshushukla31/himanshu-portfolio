@@ -6,7 +6,7 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-950 via-gray-700 to-gray-900 text-white">
       <div className="max-w-3xl p-4 md:p-6 lg:p-8 text-left">
-        <h1 className="text-2xl md:text-4xl lg:text-6xl text-center font-bold mb-6 md:mb-24 mt-6 md:mt-16">
+        <h1 className="text-4xl md:text-6xl text-center font-bold mb-6 md:mb-24 mt-6 md:mt-16">
           <Typical steps={['Contact Me', 1000]} wrapper="span" />
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">

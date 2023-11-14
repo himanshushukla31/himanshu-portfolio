@@ -18,34 +18,37 @@ const workExperience = [
         'Engineered a dynamic, OAuth2.0-integrated multi-tenancy admin page',
         'Optimized UI using Material UI and Syncfusion; implemented Cheerypi and Pgbouncer for database efficiency',
     ],
+    skills: ['Django', 'React', 'Linux']
   },
   {
     id: 2,
     position: 'Lead Developer',
     company: 'AAROHI VNIT Nagpur',
     location: 'Nagpur, Maharashtra',
-    startDate: 'June 2018',
-    endDate: 'December 2019',
+    startDate: 'July 2022',
+    endDate: 'October 2022',
     logo: "https://i.ibb.co/rbPtMnp/aarohi-logo.png",
     responsibilities: [
         "Led a team to create a responsive online registration portal for institute events",
         "Developed QR code generation and mailing logic for event registrations using Express.js",
         "Secured the platform with admin authorization and user authentication via JWT"        
     ],
+    skills: ['React', 'MongoDB', 'Node']
   },
   {
     id: 3,
     position: 'Full Stack Developer',
     company: 'AXIS VNIT Nagpur',
     location: 'Nagpur, Maharashtra',
-    startDate: 'June 2018',
-    endDate: 'December 2019',
+    startDate: 'November 2021',
+    endDate: 'April 2023',
     logo: "https://i.ibb.co/0XX7C9j/logo.png",
     responsibilities: [
         "Recognized by the Director of Institute for leading a team towards exceptional work on the AWS-based full-stack web platform",
         "Developed RESTful APIs for seamless event registrations and integrated Razorpay API for online payments",
         "Implemented OAuth third-party authentication and designed a highly effective referral system"        
     ],
+    skills: ['Javascript/EJS', 'MongoDB', 'Node']
   },
   // Add more work experiences as needed
 ];
@@ -90,6 +93,16 @@ const WorkExperiencePage = () => {
                         {responsibility}
                       </li>
                     ))}
+                    <div className="flex flex-wrap gap-2 mb-2 mt-4">
+                {experience.skills.map((skill, index) => (
+                  <div
+                    key={index}
+                    className="bg-gray-700 text-white px-2 py-1 rounded-md text-xs shadow-md"
+                  >
+                    {skill}
+                  </div>
+                ))}
+              </div>
                   </ul>
                 </div>
               </VerticalTimelineElement>

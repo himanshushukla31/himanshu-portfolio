@@ -36,6 +36,10 @@ const AboutPage = () => {
               I Love experimenting with technologies and enjoy hands on problem solving approach.
             </p>
 
+            <p className="text-gray-300 mt-4">
+            I am currently delving into cloud technologies, studying system design, and sharpening my problem-solving skills in data structures and algorithms.
+            </p>
+
             {/* Skills Section */}
             <div className="mt-8">
       <h2 className="text-3xl font-bold mb-4">Skills</h2>
