@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaLinkedin, FaTwitter, FaInstagram, FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 import Typical from 'react-typical';
 
 const ContactPage = () => {
