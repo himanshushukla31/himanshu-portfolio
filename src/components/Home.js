@@ -71,12 +71,13 @@ const HomePage = () => {
           >
             View Projects
           </Link>
-          <Link
+          <a
+          href='https://drive.google.com/file/d/1m6Stf--l9Fq0Y9KbnRWHt4yXlLPZGtvh/view?usp=drivesdk'
             // to="/contact"
             className="flex items-center bg-teal-400/10 font-semibold leading-5 text-teal-300 py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring focus:border-rgb(94 234 212)"
           >
             Resume <IoOpenOutline className='ml-1'/>
-          </Link>
+          </a>
         </div>
       </div>
     </div>
