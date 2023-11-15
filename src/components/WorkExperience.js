@@ -41,7 +41,7 @@ const workExperience = [
     company: 'AXIS VNIT Nagpur',
     location: 'Nagpur, Maharashtra',
     startDate: 'November 2021',
-    endDate: 'April 2023',
+    endDate: 'April 2022',
     logo: "https://i.ibb.co/0XX7C9j/logo.png",
     responsibilities: [
         "Recognized by the Director of Institute for leading a team towards exceptional work on the AWS-based full-stack web platform",
