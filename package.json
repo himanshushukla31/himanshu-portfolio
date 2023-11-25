@@ -34,7 +34,6 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://himanshushukla31.github.io/himanshu-portfolio/",
   "browserslist": {
     "production": [
       ">0.2%",

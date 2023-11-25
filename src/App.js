@@ -12,11 +12,11 @@ function App() {
       <div className="font-sans">
         <Header />
         <Routes>
-          <Route path="/himanshu-portfolio" element={<Home />} />
-          <Route path="/himanshu-portfolio/experience" element={<WorkExperiencePage/>}/>
-          <Route path="/himanshu-portfolio/projects" element={<Projects />} />
-          <Route path="/himanshu-portfolio/contact" element={<Contact />} />
-          <Route path="/himanshu-portfolio/about" element={<AboutPage/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/experience" element={<WorkExperiencePage/>}/>
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<AboutPage/>} />
         </Routes>
       </div>
     </Router>
