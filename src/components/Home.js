@@ -62,7 +62,7 @@ const HomePage = () => {
           Hello, I am {currentRole}<span></span>
         </h1>
         <p className="text-lg md:text-xl mb-8">
-          Showcasing your skills and projects in one place.
+        Passionate Software Engineer, crafting digital solutions with precision and creativity.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
           <Link
