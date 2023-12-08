@@ -55,7 +55,7 @@ const workExperience = [
 
 const WorkExperiencePage = () => {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-950 via-gray-700 to-gray-900 text-white p-2 md:p-4">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-bgblue text-white p-2 md:p-4">
         <div className="max-w-3xl px-2 md:px-4 text-left">
           <h1 className="text-4xl md:text-6xl text-center font-bold mb-4 md:mb-8 mt-16">
             <Typical steps={['Work Experience', 1000]} wrapper="span" />
@@ -65,13 +65,13 @@ const WorkExperiencePage = () => {
               <VerticalTimelineElement
                 key={experience.id}
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: '#343a40', color: '#fff', zIndex: 2 }}
+                contentStyle={{ background: '#191d3a', border: '2px solid #516391', color: '#fff', zIndex: 2 }}
                 contentArrowStyle={{ borderRight: '7px solid  #343a40' }}
                 date={`${experience.startDate} - ${experience.endDate}`}
-                iconStyle={{ background: '#61dafb', color: '#fff', zIndex: 3 }}
+                iconStyle={{ background: '#ec5990', color: '#fff', zIndex: 3 }}
                 icon={<FaBriefcase />}
               >
-                <div className="bg-gray-800 p-2 md:p-4 rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl w-full">
+                <div className="bg-[#081229] p-2 md:p-4 rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl w-full">
                   <div className="flex flex-col md:flex-row items-center mb-4">
                     <img
                       height="50"
@@ -97,7 +97,7 @@ const WorkExperiencePage = () => {
                 {experience.skills.map((skill, index) => (
                   <div
                     key={index}
-                    className="bg-gray-700 text-white px-2 py-1 rounded-md text-xs shadow-md"
+                    className="bg-[#516391] text-white px-2 py-1 rounded-md text-xs shadow-md"
                   >
                     {skill}
                   </div>

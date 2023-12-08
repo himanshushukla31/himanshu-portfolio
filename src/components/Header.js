@@ -10,10 +10,10 @@ const Header = () => {
   };
 
   return (
-    <header className="py-4 bg-gray-900 text-teal-300 fixed w-full z-50 transition-all duration-300 ease-in-out">
+    <header className="py-4 bg-[#191d3a] text-teal-300 fixed w-full z-50 transition-all duration-300 ease-in-out">
       <nav className="container mx-auto px-4 flex justify-between items-center relative">
-        <Link to="/" className="text-2xl font-semibold custom-typography hover:text-teal-50 transition duration-300 ease-in-out">
-          {'{Himanshu}'}
+        <Link to="/" className="text-2xl font-sans font-semibold custom-typography text-white hover:text-pink-300 transition duration-300 ease-in-out">
+          {'Himanshu'}
         </Link>
         {/* Overlay for smaller screens */}
         <div className={`lg:hidden fixed inset-0 bg-gray-900 z-40 transition-opacity ${isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'}`}>
@@ -23,39 +23,39 @@ const Header = () => {
             </button>
           </div>
           <div className="flex flex-col mt-48 justify-center items-center text-white">
-            <Link  to="/" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl text-teal-500 hover:text-green-300 transition duration-300 ease-in-out mb-8">
-              {'<HOME/>'}
+            <Link  to="/" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl text-teal-500  transition duration-300 ease-in-out mb-8">
+              {'Home'}
             </Link>
-            <Link to="/experience" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl  text-teal-500 hover:text-green-300 transition duration-300 ease-in-out mb-8">
-              {'<EXPERIENCE/>'}
+            <Link to="/experience" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl  text-teal-500  transition duration-300 ease-in-out mb-8">
+              {'Experience'}
             </Link>
-            <Link to="/projects" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl text-teal-500 hover:text-green-300 transition duration-300 ease-in-out mb-8">
-              {'<PROJECTS/>'}
+            <Link to="/projects" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl text-teal-500  transition duration-300 ease-in-out mb-8">
+              {'Projects'}
             </Link>
-            <Link to="/contact" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl text-teal-500 hover:text-green-300 transition duration-300 ease-in-out mb-8">
-              {'<CONTACT/>'}
+            <Link to="/contact" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl text-teal-500  transition duration-300 ease-in-out mb-8">
+              {'Contact'}
             </Link>
-            <Link to="/about" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl text-teal-500 hover:text-green-300 transition duration-300 ease-in-out mb-8">
-              {'<SKILLS/>'}
+            <Link to="/about" onClick={()=> handleToggleMenu(false)} className="font-bold text-xl text-teal-500  transition duration-300 ease-in-out mb-8">
+              {'Skills'}
             </Link>
           </div>
         </div>
         {/* Navigation links for larger screens */}
-        <div className={`lg:flex hidden space-x-6`}>
-          <Link to="" className="font-bold hover:text-green-300 transition duration-300 ease-in-out">
-            {'<HOME/>'}
+        <div className={`lg:flex hidden space-x-10`}>
+          <Link to="" className="font-sans text-white  text-lg transition duration-300 ease-in-out">
+            {'Home'}
           </Link>
-          <Link to="/experience" className="font-bold hover:text-green-300 transition duration-300 ease-in-out">
-            {'<EXPERIENCE/>'}
+          <Link to="/experience" className="font-sans text-white text-lg transition duration-300 ease-in-out">
+            {'Experience'}
           </Link>
-          <Link to="/projects" className="font-bold hover:text-green-300 transition duration-300 ease-in-out">
-            {'<PROJECTS/>'}
+          <Link to="/projects" className="font-sans text-white  text-lg transition duration-300 ease-in-out">
+            {'Projects'}
           </Link>
-          <Link to="/contact" className="font-bold hover:text-green-300 transition duration-300 ease-in-out">
-            {'<CONTACT/>'}
+          <Link to="/contact" className="font-sans text-white  text-lg transition duration-300 ease-in-out">
+            {'Contact'}
           </Link>
-          <Link to="/about" className="font-bold hover:text-green-300 transition duration-300 ease-in-out">
-            {'<SKILLS/>'}
+          <Link to="/about" className="font-sans text-white  text-lg transition duration-300 ease-in-out">
+            {'Skills'}
           </Link>
         </div>
         {/* Menu icon for smaller screens */}

@@ -61,17 +61,17 @@ const projects = [
 
 const ProjectsPage = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-950 via-gray-700 to-gray-900 text-white p-4 md:p-8">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-bgblue text-white p-4 md:p-8">
       <div className="max-w-8xl px-4 md:px-8 text-left">
-        <h1 className="text-4xl md:text-6xl text-center font-bold mb-8 mt-16">
+        <h1 className="text-4xl md:text-6xl text-center font-bold mb-20 mt-16">
           <Typical steps={['My Projects', 1000]} wrapper="span" />
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20 md:gap-14">
           {projects.map((project) => (
             <a
               href={project.demoLink}
               key={project.id}
-              className="bg-gray-800 cursor-pointer p-4 md:p-4 mb-4 rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl w-full ease-in-out"
+              className="bg-[#191d3a] border-[#516391] border-2 cursor-pointer p-8 md:p-6 mb-4 rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl w-full ease-in-out"
             >
               <div className="bg-opacity-70 rounded-lg overflow-hidden transition-opacity duration-300 hover:opacity-100">
                 <img
@@ -86,7 +86,7 @@ const ProjectsPage = () => {
                 {project.skills.map((skill, index) => (
                   <div
                     key={index}
-                    className="bg-gray-700 text-white px-2 py-1 rounded-md text-xs shadow-md"
+                    className="bg-[#516391] text-white px-2 py-1 rounded-md text-xs shadow-md"
                   >
                     {skill}
                   </div>
@@ -97,7 +97,7 @@ const ProjectsPage = () => {
                   href={project.demoLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-semibold text-teal-300 underline transition-colors duration-300 hover:text-teal-500"
+                  className="text-sm font-semibold text-pink-500 hover:text-pink-200 underline transition-colors duration-300"
                 >
                   Visit
                 </a>
@@ -107,7 +107,7 @@ const ProjectsPage = () => {
                   rel="noopener noreferrer"
                   className="text-lg transition-colors duration-300 hover:text-gray-300"
                 >
-                  <FaGithub className="mr-1" />
+                  <FaGithub  className="mr-1" />
                 </a>
               </div>
             </a>

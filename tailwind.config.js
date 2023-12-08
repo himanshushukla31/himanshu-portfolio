@@ -6,10 +6,15 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        'rgb': 'rgba(94, 234, 212, 1)', // Define your custom RGB color here
+        'bgblue': '#081229', // Define your custom RGB color here
       },
     },
+    fontFamily: {
+      'sans': ['Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue'],
+      'serif': ['ui-serif', 'Georgia']
+    }
   },
+  
   variants: {},
   plugins: [],
 }

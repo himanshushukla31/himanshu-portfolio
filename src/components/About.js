@@ -10,14 +10,14 @@ const skills = {
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-bgblue text-white">
       <div className="max-w-7xl p-6 text-left">
         <h1 className="text-4xl md:text-6xl font-bold mb-8 mt-16 text-center">
           <Typical steps={['About me', 1000]} wrapper="span" />
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Image Section (30%) */}
-          <div className="md:col-span-1 max-h-72 md:h-auto bg-gray-800 p-8 rounded-lg overflow-hidden">
+          <div className="md:col-span-1 max-h-72 md:h-auto bg-[#191d3a] p-6 rounded-lg overflow-hidden">
             <img
               src="https://i.ibb.co/1vxdd0z/himanshu.jpg"
               alt="himanshu"
@@ -27,7 +27,7 @@ const AboutPage = () => {
           </div>
           
           {/* Text Section (70%) */}
-          <div className="md:col-span-2 bg-gray-800 p-8 rounded-lg overflow-hidden">
+          <div className="md:col-span-2 bg-[#191d3a] border-2 border-[#516391] p-8 rounded-lg overflow-hidden">
             <h2 className="text-3xl font-bold mb-4">Why me?</h2>
             <p className="text-gray-300 mb-6">
                 Product Engineer and Fullstack Developer specializing in server-side technologies, database management, and front-end development. Skilled in technologies like Django REST Framework, React.js, Node.js, and MongoDB. Led successful projects, developing dynamic online registration portals and full-stack websites. Passionate about leveraging technology to solve real world problems.
@@ -47,7 +47,7 @@ const AboutPage = () => {
         <h3 className="text-xl font-bold mb-2">Languages</h3>
         <div className="flex flex-wrap gap-4">
           {skills.languages.map((language, index) => (
-            <div key={index} className="bg-gray-700 text-white px-4 py-2 rounded-md shadow-md">
+            <div key={index} className="bg-[#516391] text-white px-4 py-2 rounded-md shadow-md">
               {language}
             </div>
           ))}
@@ -58,7 +58,7 @@ const AboutPage = () => {
         <h3 className="text-xl font-bold mb-2">Frameworks</h3>
         <div className="flex flex-wrap gap-4">
           {skills.frameworks.map((framework, index) => (
-            <div key={index} className="bg-gray-700 text-white px-4 py-2 rounded-md shadow-md">
+            <div key={index} className="bg-[#516391] text-white px-4 py-2 rounded-md shadow-md">
               {framework}
             </div>
           ))}
@@ -69,7 +69,7 @@ const AboutPage = () => {
         <h3 className="text-xl font-bold mb-2">Databases</h3>
         <div className="flex flex-wrap gap-4">
           {skills.databases.map((database, index) => (
-            <div key={index} className="bg-gray-700 text-white px-4 py-2 rounded-md shadow-md">
+            <div key={index} className="bg-[#516391] text-white px-4 py-2 rounded-md shadow-md">
               {database}
             </div>
           ))}
@@ -80,7 +80,7 @@ const AboutPage = () => {
         <h3 className="text-xl font-bold mb-2">Cloud/Devops</h3>
         <div className="flex flex-wrap gap-4">
           {skills.cloud.map((cloudService, index) => (
-            <div key={index} className="bg-gray-700 text-white px-4 py-2 rounded-md shadow-md">
+            <div key={index} className="bg-[#516391] text-white px-4 py-2 rounded-md shadow-md">
               {cloudService}
             </div>
           ))}
