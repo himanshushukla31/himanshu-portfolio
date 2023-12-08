@@ -14,7 +14,6 @@ module.exports = {
       'serif': ['ui-serif', 'Georgia']
     }
   },
-  
   variants: {},
   plugins: [],
 }

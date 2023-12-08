@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 import Typical from 'react-typical';

@@ -1,6 +1,7 @@
 import React from 'react';
 import Typical from 'react-typical';
 
+
 const skills = {
     languages: ['JavaScript', 'HTML', 'CSS', 'Python', 'C++'],
     frameworks: ['React', 'Next.js', 'Node.js', 'Django'],
