@@ -88,12 +88,12 @@ const HomePage = () => {
             </linearGradient>
           </defs>
           <rect width="100%" height="100%" fill="url(#grad1)" />
-          {[...Array(100)].map((_, i) => (
+          {[...Array(50)].map((_, i) => (
             <motion.circle
               key={i}
               cx={Math.random() * 100 + "%"}
               cy={Math.random() * 100 + "%"}
-              r={Math.random() * 3 + 0.5}
+              r={Math.random() * 2 + 0.5}
               fill="rgba(255, 255, 255, 0.2)"
               initial={{ opacity: 0 }}
               animate={{
@@ -101,7 +101,7 @@ const HomePage = () => {
                 scale: [0, 1, 0],
               }}
               transition={{
-                duration: Math.random() * 15 + 5,
+                duration: Math.random() * 10 + 5,
                 repeat: Infinity,
                 repeatType: "loop",
                 ease: "easeInOut",
@@ -119,36 +119,36 @@ const HomePage = () => {
           className="text-center"
         >
           <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className="inline-block"
           >
             <Image
               src="https://i.ibb.co/TRnjdgF/Whats-App-Image-2024-09-16-at-00-27-13.jpg"
               alt="Himanshu Shukla"
-              width={250}
-              height={250}
-              className="rounded-full mx-auto mb-6 sm:mb-8 border-4 border-blue-500 shadow-lg"
+              width={200}
+              height={200}
+              className="rounded-full mx-auto mb-4 sm:mb-6 border-4 border-blue-500 shadow-lg"
             />
           </motion.div>
           
           <motion.h1 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-2 sm:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600"
             animate={controls}
             onMouseEnter={handleHover}
           >
             {`<Code/>`}
           </motion.h1>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4">
             Hello, I am <span className="text-pink-500">{currentRole}</span>
           </h2>
           
-          <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 text-blue-200">
+          <p className="text-base sm:text-lg md:text-xl mb-4 sm:mb-8 text-blue-200">
             Passionate about crafting innovative digital solutions.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8 sm:mb-12">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-6 sm:mb-8">
             <motion.div 
               whileHover={{ scale: 1.05 }} 
               whileTap={{ scale: 0.95 }}
@@ -156,7 +156,7 @@ const HomePage = () => {
               onMouseLeave={handleCursorLeave}
               className="w-full sm:w-auto"
             >
-              <Link href="/projects" className="block w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 text-center">
+              <Link href="/projects" className="block w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 sm:py-3 sm:px-6 rounded-full transition duration-300 text-center text-sm sm:text-base">
                 View Projects
               </Link>
             </motion.div>
@@ -168,13 +168,13 @@ const HomePage = () => {
               onMouseLeave={handleCursorLeave}
               className="w-full sm:w-auto"
             >
-              <a href='https://drive.google.com/file/d/1m6Stf--l9Fq0Y9KbnRWHt4yXlLPZGtvh/view?usp=sharing' target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 flex items-center justify-center">
+              <a href='https://drive.google.com/file/d/1m6Stf--l9Fq0Y9KbnRWHt4yXlLPZGtvh/view?usp=sharing' target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-4 sm:py-3 sm:px-6 rounded-full transition duration-300 flex items-center justify-center text-sm sm:text-base">
                 Resume <IoOpenOutline className="ml-2" />
               </a>
             </motion.div>
           </div>
           
-          <div className="flex justify-center space-x-4 sm:space-x-6">
+          <div className="flex justify-center space-x-4">
             {[
               { href: "https://github.com/himanshushukla31", icon: FaGithub },
               { href: "https://www.linkedin.com/in/himanshu-shukla-23565119a/", icon: FaLinkedin },
@@ -185,7 +185,7 @@ const HomePage = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl sm:text-3xl text-gray-300 hover:text-white transition-colors"
+                className="text-xl sm:text-2xl text-gray-300 hover:text-white transition-colors"
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
                 onMouseEnter={handleCursorEnter}
