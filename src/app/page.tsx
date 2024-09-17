@@ -1,101 +1,231 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import React, { useState, useEffect, useMemo } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { IoOpenOutline } from 'react-icons/io5';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { motion, useAnimation } from 'framer-motion';
+
+const HomePage = () => {
+  const [currentRole, setCurrentRole] = useState('');
+  const roles = useMemo(() => ["Himanshu Shukla.", "Full Stack Developer.", "Software Engineer."], []);
+  const [rolesIndex, setRolesIndex] = useState(0);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [cursorVariant, setCursorVariant] = useState("default");
+
+  useEffect(() => {
+    const typingSpeed = 100;
+    let charIndex = -1;
+
+    const typingInterval = setInterval(() => {
+      const role = roles[rolesIndex];
+      charIndex++;
+
+      setCurrentRole(role.substring(0, charIndex + 1));
+
+      if (charIndex === role.length - 1) {
+        clearInterval(typingInterval);
+        setTimeout(() => {
+          charIndex = -1;
+          setCurrentRole('');
+          setRolesIndex((prevIndex) => (prevIndex + 1) % roles.length);
+        }, 2000);
+      }
+    }, typingSpeed);
+
+    return () => clearInterval(typingInterval);
+  }, [rolesIndex, roles]);
+
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      setMousePosition({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  const controls = useAnimation();
+
+  const handleHover = () => {
+    controls.start({
+      scale: [1, 1.2, 1],
+      rotate: [0, 10, -10, 0],
+      transition: { duration: 0.5 }
+    });
+  };
+
+  const cursorVariants = {
+    default: {
+      width: 32,
+      height: 32,
+      backgroundColor: "rgba(219, 39, 119, 0.7)", // Pink color from the theme
+    },
+    pointer: {
+      width: 64,
+      height: 64,
+      backgroundColor: "rgba(236, 72, 153, 0.7)", // Lighter pink color
+      mixBlendMode: "difference" as const,
+    },
+  };
+
+  const handleCursorEnter = () => setCursorVariant("pointer");
+  const handleCursorLeave = () => setCursorVariant("default");
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen bg-[#081229] text-white relative overflow-hidden flex items-center justify-center">
+      {/* Darker background with fading bubbles */}
+      <div className="absolute inset-0">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#081229', stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: '#081229', stopOpacity: 1 }} />
+            </linearGradient>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grad1)" />
+          {[...Array(100)].map((_, i) => (
+            <motion.circle
+              key={i}
+              cx={Math.random() * 100 + "%"}
+              cy={Math.random() * 100 + "%"}
+              r={Math.random() * 3 + 0.5}
+              fill="rgba(255, 255, 255, 0.2)"
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: [0, 0.5, 0],
+                scale: [0, 1, 0],
+              }}
+              transition={{
+                duration: Math.random() * 15 + 5,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+        </svg>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="inline-block"
           >
             <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="https://i.ibb.co/TRnjdgF/Whats-App-Image-2024-09-16-at-00-27-13.jpg"
+              alt="Himanshu Shukla"
+              width={250}
+              height={250}
+              className="rounded-full mx-auto mb-6 sm:mb-8 border-4 border-blue-500 shadow-lg"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          </motion.div>
+          
+          <motion.h1 
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600"
+            animate={controls}
+            onMouseEnter={handleHover}
           >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+            {`<Code/>`}
+          </motion.h1>
+          
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+            Hello, I am <span className="text-pink-500">{currentRole}</span>
+          </h2>
+          
+          <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 text-blue-200">
+            Passionate about crafting innovative digital solutions.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8 sm:mb-12">
+            <motion.div 
+              whileHover={{ scale: 1.05 }} 
+              whileTap={{ scale: 0.95 }}
+              onMouseEnter={handleCursorEnter}
+              onMouseLeave={handleCursorLeave}
+              className="w-full sm:w-auto"
+            >
+              <Link href="/projects" className="block w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 text-center">
+                View Projects
+              </Link>
+            </motion.div>
+            
+            <motion.div 
+              whileHover={{ scale: 1.05 }} 
+              whileTap={{ scale: 0.95 }}
+              onMouseEnter={handleCursorEnter}
+              onMouseLeave={handleCursorLeave}
+              className="w-full sm:w-auto"
+            >
+              <a href='https://drive.google.com/file/d/1m6Stf--l9Fq0Y9KbnRWHt4yXlLPZGtvh/view?usp=sharing' target="_blank" rel="noopener noreferrer" className="block w-full sm:w-auto bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 flex items-center justify-center">
+                Resume <IoOpenOutline className="ml-2" />
+              </a>
+            </motion.div>
+          </div>
+          
+          <div className="flex justify-center space-x-4 sm:space-x-6">
+            {[
+              { href: "https://github.com/himanshushukla31", icon: FaGithub },
+              { href: "https://www.linkedin.com/in/himanshu-shukla-23565119a/", icon: FaLinkedin },
+              { href: "mailto:himansushukla3112@gmail.com", icon: FaEnvelope }
+            ].map((social, index) => (
+              <motion.a
+                key={index}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-2xl sm:text-3xl text-gray-300 hover:text-white transition-colors"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                whileTap={{ scale: 0.9 }}
+                onMouseEnter={handleCursorEnter}
+                onMouseLeave={handleCursorLeave}
+              >
+                <social.icon />
+              </motion.a>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Custom cursor bubble */}
+      <motion.div
+        className="fixed pointer-events-none z-50 rounded-full mix-blend-difference hidden sm:block"
+        variants={cursorVariants}
+        animate={cursorVariant}
+        style={{
+          left: mousePosition.x - 16,
+          top: mousePosition.y - 16,
+        }}
+        transition={{
+          type: "spring",
+          damping: 30,
+          stiffness: 200,
+          restDelta: 0.001
+        }}
+      />
+      <style jsx global>{`
+        @media (min-width: 640px) {
+          body {
+            cursor: none;
+          }
+          a, button {
+            cursor: none;
+          }
+        }
+      `}</style>
     </div>
   );
-}
+};
+
+export default HomePage;

@@ -1,19 +1,18 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+module.exports = {
+  content: ["./src/**/*.{js,ts,jsx,tsx}", "./public/index.html"],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      backgroundColor: {
+        bgblue: "#081229", // Define your custom RGB color here
       },
     },
+    fontFamily: {
+      sans: [
+        "Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue",
+      ],
+      serif: ["ui-serif", "Georgia"],
+    },
   },
+  variants: {},
   plugins: [],
 };
-export default config;
