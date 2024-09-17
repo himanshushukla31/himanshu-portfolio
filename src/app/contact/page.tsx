@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaEnvelope, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const ContactPage = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -87,7 +87,7 @@ const ContactPage = () => {
           <h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
             Get in Touch
           </h1>
-          <p className="text-xl text-blue-200">Let's connect and create something amazing together!</p>
+          <p className="text-xl text-blue-200">Let&apos;s connect and explore how we can work together!</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
