@@ -66,7 +66,7 @@ const Header = () => {
             onClick={handleToggleMenu}
             className="focus:outline-none"
           >
-            <FiMenu className="w-6 h-6 text-pink-500 hover:text-blue-300 transition duration-300 ease-in-out" />
+            <FiMenu className="w-8 h-8 text-pink-500 hover:text-blue-300 transition duration-300 ease-in-out" />
           </motion.button>
         </div>
         {/* Overlay for smaller screens */}
@@ -79,16 +79,16 @@ const Header = () => {
               transition={{ duration: 0.3 }}
               className="lg:hidden fixed inset-0 bg-gradient-to-b from-gray-900 to-blue-900 bg-opacity-95 z-40"
             >
-              <div className="flex justify-end p-4">
+              <div className="flex justify-end p-6">
                 <button onClick={handleToggleMenu} className="text-pink-500">
-                  <FiX className="w-6 h-6" />
+                  <FiX className="w-8 h-8" />
                 </button>
               </div>
               <motion.div
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ staggerChildren: 0.1, delayChildren: 0.2 }}
-                className="flex flex-col mt-24 justify-center items-center text-blue-200"
+                className="flex flex-col mt-24 justify-center items-center text-blue-200 space-y-12"
               >
                 {navLinks.map((link) => (
                   <motion.div
@@ -99,7 +99,7 @@ const Header = () => {
                     <Link
                       href={link.href}
                       onClick={handleToggleMenu}
-                      className={`font-bold text-xl hover:text-pink-500 transition duration-300 ease-in-out mb-8 ${
+                      className={`font-bold text-2xl hover:text-pink-500 transition duration-300 ease-in-out ${
                         pathname === link.href ? 'text-pink-500' : ''
                       }`}
                     >
