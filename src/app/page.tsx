@@ -77,7 +77,7 @@ const HomePage = () => {
   const handleCursorLeave = () => setCursorVariant("default");
 
   return (
-    <div className="min-h-screen bg-[#081229] text-white relative overflow-hidden flex items-center justify-center">
+    <div className="min-h-screen bg-[#081229] text-white relative overflow-hidden flex flex-col">
       {/* Background with fading bubbles */}
       <div className="absolute inset-0">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -111,7 +111,7 @@ const HomePage = () => {
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 flex items-center justify-center min-h-screen">
+      <div className="container mx-auto px-4 relative z-10 flex-grow flex items-start sm:items-center justify-center pt-16 sm:pt-0">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
