@@ -97,15 +97,48 @@ const ProjectsPage = () => {
   const handleCursorLeave = () => setCursorVariant("default");
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#081229] to-[#0f1c3d] text-white">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-[#081229] text-white relative overflow-hidden flex flex-col">
+      {/* Background with fading bubbles */}
+      <div className="absolute inset-0">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#081229', stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: '#081229', stopOpacity: 1 }} />
+            </linearGradient>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grad1)" />
+          {[...Array(50)].map((_, i) => (
+            <motion.circle
+              key={i}
+              cx={Math.random() * 100 + "%"}
+              cy={Math.random() * 100 + "%"}
+              r={Math.random() * 2 + 0.5}
+              fill="rgba(255, 255, 255, 0.2)"
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: [0, 0.5, 0],
+                scale: [0, 1, 0],
+              }}
+              transition={{
+                duration: Math.random() * 10 + 5,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+        </svg>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10 py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+          <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
             My Projects
           </h1>
           <p className="text-xl md:text-2xl text-blue-200">

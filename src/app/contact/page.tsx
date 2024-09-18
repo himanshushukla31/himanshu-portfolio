@@ -54,12 +54,12 @@ const ContactPage = () => {
             </linearGradient>
           </defs>
           <rect width="100%" height="100%" fill="url(#grad1)" />
-          {[...Array(100)].map((_, i) => (
+          {[...Array(50)].map((_, i) => (
             <motion.circle
               key={i}
               cx={Math.random() * 100 + "%"}
               cy={Math.random() * 100 + "%"}
-              r={Math.random() * 3 + 0.5}
+              r={Math.random() * 2 + 0.5}
               fill="rgba(255, 255, 255, 0.2)"
               initial={{ opacity: 0 }}
               animate={{
@@ -67,7 +67,7 @@ const ContactPage = () => {
                 scale: [0, 1, 0],
               }}
               transition={{
-                duration: Math.random() * 15 + 5,
+                duration: Math.random() * 10 + 5,
                 repeat: Infinity,
                 repeatType: "loop",
                 ease: "easeInOut",
@@ -77,20 +77,20 @@ const ContactPage = () => {
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 py-8 md:py-0">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12"
         >
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+          <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold mb-4 md:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
             Get in Touch
           </h1>
-          <p className="text-xl text-blue-200">Let&apos;s connect and explore how we can work together!</p>
+          <p className="text-base sm:text-lg md:text-xl text-blue-200 px-4">Let&apos;s connect and explore how we can work together!</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {contactInfo.map((info, index) => (
             <motion.div
               key={index}
@@ -100,17 +100,17 @@ const ContactPage = () => {
             >
               <Link href={info.link} passHref>
                 <motion.div
-                  className="bg-[#191d3a] border-2 border-[#516391] p-6 rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+                  className="bg-[#191d3a] border-2 border-[#516391] p-5 md:p-6 rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onMouseEnter={handleCursorEnter}
                   onMouseLeave={handleCursorLeave}
                 >
-                  <div className="flex items-center mb-4">
-                    <info.icon className="text-4xl mr-4 text-pink-500" />
+                  <div className="flex items-center mb-3 md:mb-4">
+                    <info.icon className="text-2xl sm:text-3xl md:text-4xl mr-3 md:mr-4 text-pink-500" />
                     <div>
-                      <h2 className="text-2xl font-bold mb-2 text-blue-400">{info.title}</h2>
-                      <p className="text-gray-300">{info.value}</p>
+                      <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 md:mb-2 text-blue-400">{info.title}</h2>
+                      <p className="text-sm sm:text-base md:text-lg text-gray-300">{info.value}</p>
                     </div>
                   </div>
                 </motion.div>

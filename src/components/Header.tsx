@@ -30,7 +30,7 @@ const Header = () => {
       className="py-4 fixed w-full z-50 transition-all duration-300 ease-in-out bg-[#081229] shadow-lg"
     >
       <nav className="container mx-auto px-4 flex justify-between items-center relative">
-        <Link href="/" className="text-2xl font-sans font-semibold spacing custom-typography text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 hover:from-pink-500 hover:to-purple-600 transition duration-300 ease-in-out">
+        <Link href="/" className="text-2xl sm:text-3xl md:text-4xl font-sans font-semibold spacing custom-typography text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 hover:from-pink-500 hover:to-purple-600 transition duration-300 ease-in-out">
           <motion.span
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
